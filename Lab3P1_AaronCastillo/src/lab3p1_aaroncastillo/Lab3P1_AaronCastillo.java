@@ -355,7 +355,34 @@ public class Lab3P1_AaronCastillo {
                 }
                 break;
             case 3:
-                System.out.println("casa");
+                System.out.println("Ingrese un numero impar y mayor o igual que 7 [0 para salir]: ");
+                int numero=leer.nextInt();
+                while (numero!=0){
+                    int imp=0;
+                    if (numero>=7){
+                        imp=numero%2;
+                        if (imp==1){
+                            for (int i=1;i<=numero;i++){
+                                for (int j=1;j<=numero;j++){
+                                    if (i==1||i==numero||j==1||j==numero){
+                                        System.out.print(" * ");
+                                    }else if(j==numero/2+1){
+                                        System.out.print(" | ");
+                                    }else if(i+j==numero+1){
+                                        System.out.print(" > ");
+                                    }else if(i==j){
+                                        System.out.print(" > ");
+                                    }else{
+                                        System.out.print("   ");
+                                    }
+                                }
+                                System.out.println();
+                            }
+                        }
+                    }
+                    System.out.println("Ingrese un numero impar y mayor o igual que 7 [0 para salir]: ");
+                    numero=leer.nextInt();
+                }
                 break;
         }//fin opcion 2
             System.out.println("");
